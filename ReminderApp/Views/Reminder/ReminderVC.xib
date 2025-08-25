@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,6 +12,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReminderVC" customModule="ReminderApp" customModuleProvider="target">
             <connections>
+                <outlet property="newReminderButton" destination="Wr4-q3-ewT" id="3cB-Ju-vtf"/>
+                <outlet property="searchBar" destination="qL5-gf-R23" id="3TR-S4-hAO"/>
+                <outlet property="tableView" destination="Ex3-AL-BLs" id="7lO-fR-YDs"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,20 +23,68 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cCo-dm-OD1">
-                    <rect key="frame" x="175" y="416" width="42" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reminders" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jYP-26-0Ta">
+                    <rect key="frame" x="146" y="134" width="101.33333333333331" height="24"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <color key="textColor" name="Neutral1"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="qL5-gf-R23">
+                    <rect key="frame" x="8" y="176" width="377" height="36"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="36" id="62O-US-4db"/>
+                    </constraints>
+                    <color key="barTintColor" name="ColorECECF1"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="e9R-HO-eyd"/>
+                    </connections>
+                </searchBar>
+                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wr4-q3-ewT">
+                    <rect key="frame" x="8" y="739" width="179" height="29"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="29" id="jki-Wx-pex"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="ic_add" title="  New Reminder">
+                        <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="18"/>
+                        <color key="baseForegroundColor" name="Accent"/>
+                    </buttonConfiguration>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ex3-AL-BLs">
+                    <rect key="frame" x="0.0" y="224" width="393" height="507"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Wr4-q3-ewT" secondAttribute="bottom" constant="16" id="1Tx-gs-hTz"/>
+                <constraint firstItem="qL5-gf-R23" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="4Xj-gL-U0s"/>
+                <constraint firstItem="Ex3-AL-BLs" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Nw6-gP-RrN"/>
+                <constraint firstItem="qL5-gf-R23" firstAttribute="top" secondItem="jYP-26-0Ta" secondAttribute="bottom" constant="18" id="Orn-Y2-fOB"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Ex3-AL-BLs" secondAttribute="trailing" id="Pbk-pX-hxC"/>
+                <constraint firstItem="jYP-26-0Ta" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="YP3-5f-bl2"/>
+                <constraint firstItem="Wr4-q3-ewT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="j6M-eZ-3OX"/>
+                <constraint firstItem="Wr4-q3-ewT" firstAttribute="top" secondItem="Ex3-AL-BLs" secondAttribute="bottom" constant="8" id="ond-J5-L5N"/>
+                <constraint firstAttribute="trailing" secondItem="qL5-gf-R23" secondAttribute="trailing" constant="8" id="qSJ-L3-P2B"/>
+                <constraint firstItem="Ex3-AL-BLs" firstAttribute="top" secondItem="qL5-gf-R23" secondAttribute="bottom" constant="12" id="rhq-1N-Uom"/>
+                <constraint firstItem="jYP-26-0Ta" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="z2S-sb-hHj"/>
+            </constraints>
             <point key="canvasLocation" x="83" y="-11"/>
         </view>
     </objects>
     <resources>
+        <image name="ic_add" width="24" height="24.333333969116211"/>
+        <namedColor name="Accent">
+            <color red="0.38823529411764707" green="0.58039215686274515" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ColorECECF1">
+            <color red="0.92549019607843142" green="0.92549019607843142" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Neutral1">
+            <color red="0.086274509803921567" green="0.098039215686274508" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

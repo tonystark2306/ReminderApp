@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TagVC" customModule="ReminderApp" customModuleProvider="target">
+            <connections>
+                <outlet property="containerView" destination="uyM-zs-Yxe" id="37V-LY-Hfp"/>
+                <outlet property="healthButton" destination="4Ll-3M-2my" id="NDd-tA-L1a"/>
+                <outlet property="learnButton" destination="CMA-Vx-fTD" id="hZe-YZ-cUu"/>
+                <outlet property="routineButton" destination="u93-tX-YUE" id="Mab-ip-4ly"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="workButton" destination="3Yw-vy-XEj" id="dzS-bs-Yym"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uyM-zs-Yxe">
+                    <rect key="frame" x="16" y="131" width="361" height="100"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="R9d-jA-pTz">
+                            <rect key="frame" x="12" y="12" width="314" height="76"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="aps-0k-I4T">
+                                    <rect key="frame" x="0.0" y="0.0" width="314" height="33.333333333333336"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CMA-Vx-fTD">
+                                            <rect key="frame" x="0.0" y="0.0" width="96.666666666666671" height="33.333333333333336"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" title="Học tập">
+                                                <backgroundConfiguration key="background" cornerRadius="8">
+                                                    <color key="backgroundColor" name="Accent"/>
+                                                </backgroundConfiguration>
+                                                <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
+                                                <color key="baseForegroundColor" name="Neutral5"/>
+                                            </buttonConfiguration>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Yw-vy-XEj">
+                                            <rect key="frame" x="108.66666666666666" y="0.0" width="96.666666666666657" height="33.333333333333336"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" title="Công việc">
+                                                <backgroundConfiguration key="background" cornerRadius="8">
+                                                    <color key="backgroundColor" name="Warning"/>
+                                                </backgroundConfiguration>
+                                                <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
+                                                <color key="baseForegroundColor" name="Neutral5"/>
+                                            </buttonConfiguration>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u93-tX-YUE">
+                                            <rect key="frame" x="217.33333333333334" y="0.0" width="96.666666666666657" height="33.333333333333336"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" title="Thói quen">
+                                                <backgroundConfiguration key="background" cornerRadius="8">
+                                                    <color key="backgroundColor" name="Low"/>
+                                                </backgroundConfiguration>
+                                                <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
+                                                <color key="baseForegroundColor" name="Neutral5"/>
+                                            </buttonConfiguration>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="WYX-VM-QW4">
+                                    <rect key="frame" x="0.0" y="43.333333333333343" width="91.333333333333329" height="32.666666666666657"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ll-3M-2my">
+                                            <rect key="frame" x="0.0" y="0.0" width="91.333333333333329" height="32.666666666666664"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" title="Sức khoẻ">
+                                                <backgroundConfiguration key="background" cornerRadius="8">
+                                                    <color key="backgroundColor" name="Primary"/>
+                                                </backgroundConfiguration>
+                                                <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
+                                                <color key="baseForegroundColor" name="Neutral5"/>
+                                            </buttonConfiguration>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="R9d-jA-pTz" secondAttribute="bottom" constant="12" id="82I-xY-YE2"/>
+                        <constraint firstItem="R9d-jA-pTz" firstAttribute="top" secondItem="uyM-zs-Yxe" secondAttribute="top" constant="12" id="FFV-JR-WQF"/>
+                        <constraint firstAttribute="height" constant="100" id="M2n-4t-6RY"/>
+                        <constraint firstItem="R9d-jA-pTz" firstAttribute="leading" secondItem="uyM-zs-Yxe" secondAttribute="leading" constant="12" id="RCE-pM-J0g"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="ColorF2F2F6"/>
+            <constraints>
+                <constraint firstItem="uyM-zs-Yxe" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="13" id="MxF-vi-Hu1"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="uyM-zs-Yxe" secondAttribute="trailing" constant="16" id="NfX-Pk-zOi"/>
+                <constraint firstItem="uyM-zs-Yxe" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="mO8-qT-o9a"/>
+            </constraints>
+            <point key="canvasLocation" x="-73" y="-11"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="Accent">
+            <color red="0.38823529411764707" green="0.58039215686274515" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ColorF2F2F6">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Low">
+            <color red="0.27058823529411763" green="0.67843137254901964" blue="0.69019607843137254" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Neutral5">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Primary">
+            <color red="1" green="0.38823529411764707" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Warning">
+            <color red="0.92549019607843142" green="0.70196078431372544" blue="0.26666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
