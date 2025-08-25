@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewReminderVC" customModule="ReminderApp" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="hsn-R4-bYw" id="ZY1-9a-KA0"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
