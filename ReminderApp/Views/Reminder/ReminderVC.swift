@@ -69,7 +69,7 @@ class ReminderVC: UIViewController {
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 64
         tableView.keyboardDismissMode = .interactive
-        tableView.separatorStyle = .singleLine
+        tableView.separatorStyle = .none
 
         setupSortButton()
 
