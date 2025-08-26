@@ -10,7 +10,6 @@ import UIKit
 class DateCell: UITableViewCell {
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var switchButton: UISwitch!
-
     var onToggle: ((Bool) -> Void)?
 
     override func awakeFromNib() {
@@ -18,9 +17,7 @@ class DateCell: UITableViewCell {
         switchButton.addTarget(self, action: #selector(toggled), for: .valueChanged)
     }
 
-    func configure(isOn: Bool) {
-        switchButton.isOn = isOn
-    }
+    func configure(isOn: Bool) { switchButton.isOn = isOn }
 
     func firstCellCorner() {
         containerView?.layer.masksToBounds = true

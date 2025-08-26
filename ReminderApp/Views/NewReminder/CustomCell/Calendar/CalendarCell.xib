@@ -43,7 +43,7 @@
             <color key="backgroundColor" name="ColorF2F2F6"/>
             <connections>
                 <outlet property="containerView" destination="H2p-sc-9uM" id="zHm-2B-t8w"/>
-                <outlet property="picker" destination="3i0-zH-Sdt" id="VPt-mR-EXv"/>
+                <outlet property="datePicker" destination="3i0-zH-Sdt" id="77R-04-QWn"/>
             </connections>
             <point key="canvasLocation" x="-73.282442748091597" y="65.845070422535215"/>
         </tableViewCell>

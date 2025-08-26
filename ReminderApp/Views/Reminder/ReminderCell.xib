@@ -71,6 +71,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="doneButton" destination="KTT-kR-MO3" id="PBg-XT-bGk"/>
                 <outlet property="infoButton" destination="foU-Eg-jDI" id="OxN-gN-vnp"/>
                 <outlet property="noteTextView" destination="2CN-YU-fmk" id="uWp-wL-kTc"/>
                 <outlet property="titleTextView" destination="6s4-pM-rVY" id="KpE-aO-dbt"/>
