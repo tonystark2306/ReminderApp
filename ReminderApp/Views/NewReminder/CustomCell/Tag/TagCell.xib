@@ -65,6 +65,7 @@
             <color key="backgroundColor" name="ColorF2F2F6"/>
             <connections>
                 <outlet property="containerView" destination="H2p-sc-9uM" id="e8h-06-Lzl"/>
+                <outlet property="tagLabel" destination="Kag-R7-B6C" id="BNU-kG-3ga"/>
             </connections>
             <point key="canvasLocation" x="131.29770992366412" y="-5.6338028169014089"/>
         </tableViewCell>

@@ -32,37 +32,31 @@
                             <rect key="frame" x="12" y="12" width="314" height="76"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="aps-0k-I4T">
-                                    <rect key="frame" x="0.0" y="0.0" width="314" height="33.333333333333336"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="314" height="39"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CMA-Vx-fTD">
-                                            <rect key="frame" x="0.0" y="0.0" width="96.666666666666671" height="33.333333333333336"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="96.666666666666671" height="39"/>
                                             <state key="normal" title="Button"/>
                                             <buttonConfiguration key="configuration" style="plain" title="Học tập">
-                                                <backgroundConfiguration key="background" cornerRadius="8">
-                                                    <color key="backgroundColor" name="Accent"/>
-                                                </backgroundConfiguration>
+                                                <backgroundConfiguration key="background" cornerRadius="8"/>
                                                 <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
                                                 <color key="baseForegroundColor" name="Neutral5"/>
                                             </buttonConfiguration>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Yw-vy-XEj">
-                                            <rect key="frame" x="108.66666666666666" y="0.0" width="96.666666666666657" height="33.333333333333336"/>
+                                            <rect key="frame" x="108.66666666666666" y="0.0" width="96.666666666666657" height="39"/>
                                             <state key="normal" title="Button"/>
                                             <buttonConfiguration key="configuration" style="plain" title="Công việc">
-                                                <backgroundConfiguration key="background" cornerRadius="8">
-                                                    <color key="backgroundColor" name="Warning"/>
-                                                </backgroundConfiguration>
+                                                <backgroundConfiguration key="background" cornerRadius="8"/>
                                                 <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
                                                 <color key="baseForegroundColor" name="Neutral5"/>
                                             </buttonConfiguration>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u93-tX-YUE">
-                                            <rect key="frame" x="217.33333333333334" y="0.0" width="96.666666666666657" height="33.333333333333336"/>
+                                            <rect key="frame" x="217.33333333333334" y="0.0" width="96.666666666666657" height="39"/>
                                             <state key="normal" title="Button"/>
                                             <buttonConfiguration key="configuration" style="plain" title="Thói quen">
-                                                <backgroundConfiguration key="background" cornerRadius="8">
-                                                    <color key="backgroundColor" name="Low"/>
-                                                </backgroundConfiguration>
+                                                <backgroundConfiguration key="background" cornerRadius="8"/>
                                                 <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
                                                 <color key="baseForegroundColor" name="Neutral5"/>
                                             </buttonConfiguration>
@@ -70,15 +64,16 @@
                                     </subviews>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="WYX-VM-QW4">
-                                    <rect key="frame" x="0.0" y="43.333333333333343" width="91.333333333333329" height="32.666666666666657"/>
+                                    <rect key="frame" x="0.0" y="49" width="91.333333333333329" height="27"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ll-3M-2my">
-                                            <rect key="frame" x="0.0" y="0.0" width="91.333333333333329" height="32.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="91.333333333333329" height="27"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="27" id="Lcn-Qh-WOG"/>
+                                            </constraints>
                                             <state key="normal" title="Button"/>
                                             <buttonConfiguration key="configuration" style="plain" title="Sức khoẻ">
-                                                <backgroundConfiguration key="background" cornerRadius="8">
-                                                    <color key="backgroundColor" name="Primary"/>
-                                                </backgroundConfiguration>
+                                                <backgroundConfiguration key="background" cornerRadius="8"/>
                                                 <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
                                                 <color key="baseForegroundColor" name="Neutral5"/>
                                             </buttonConfiguration>
@@ -108,23 +103,11 @@
         </view>
     </objects>
     <resources>
-        <namedColor name="Accent">
-            <color red="0.38823529411764707" green="0.58039215686274515" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="ColorF2F2F6">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="Low">
-            <color red="0.27058823529411763" green="0.67843137254901964" blue="0.69019607843137254" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="Neutral5">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Primary">
-            <color red="1" green="0.38823529411764707" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Warning">
-            <color red="0.92549019607843142" green="0.70196078431372544" blue="0.26666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

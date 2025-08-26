@@ -8,19 +8,22 @@
 import UIKit
 
 class TagCell: UITableViewCell {
+    @IBOutlet weak var tagLabel: UILabel!
     @IBOutlet weak var containerView: UIView!
+
     override func awakeFromNib() {
         super.awakeFromNib()
+        tagLabel.lineBreakMode = .byTruncatingTail
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-    
     func singleCellCorner() {
         containerView?.layer.masksToBounds = true
         containerView?.layer.cornerRadius = 12
         containerView?.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMaxYCorner]
         containerView?.backgroundColor = .neutral5
+    }
+
+    func configure(names: [String]) {
+        tagLabel.text = names.isEmpty ? "None" : names.joined(separator: ", ")
     }
 }

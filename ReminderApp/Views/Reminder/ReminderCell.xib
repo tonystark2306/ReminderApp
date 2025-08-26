@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -19,7 +20,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KTT-kR-MO3">
-                        <rect key="frame" x="16" y="4" width="22" height="22"/>
+                        <rect key="frame" x="16" y="8" width="22" height="22"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="22" id="aG9-9r-kks"/>
                             <constraint firstAttribute="height" constant="22" id="w3c-ti-W13"/>
@@ -49,7 +50,7 @@
                         </subviews>
                     </stackView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="foU-Eg-jDI">
-                        <rect key="frame" x="282" y="4" width="22" height="22"/>
+                        <rect key="frame" x="282" y="8" width="22" height="22"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="22" id="4xi-lS-WcN"/>
                             <constraint firstAttribute="width" constant="22" id="pwe-v1-dXZ"/>
@@ -57,20 +58,33 @@
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="plain" image="ic_info"/>
                     </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ndD-Bq-FNm">
+                        <rect key="frame" x="54" y="59.666666666666664" width="266" height="0.3333333333333357"/>
+                        <color key="backgroundColor" name="Neutral3"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="0.5" id="2KC-Vj-sf2"/>
+                            <constraint firstAttribute="height" constant="0.5" id="rNb-yV-yzI"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="ARx-pE-xe9" secondAttribute="trailing" constant="36" id="27S-XG-5Uc"/>
                     <constraint firstAttribute="trailing" secondItem="foU-Eg-jDI" secondAttribute="trailing" constant="16" id="Aol-rf-AUj"/>
                     <constraint firstItem="KTT-kR-MO3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="C2c-6K-SUW"/>
-                    <constraint firstItem="KTT-kR-MO3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="Caa-Tk-Wa1"/>
                     <constraint firstAttribute="bottom" secondItem="ARx-pE-xe9" secondAttribute="bottom" constant="8" id="GEe-Ar-Nut"/>
-                    <constraint firstItem="foU-Eg-jDI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="JSQ-mH-3s6"/>
+                    <constraint firstAttribute="bottom" secondItem="ndD-Bq-FNm" secondAttribute="bottom" id="HOF-dD-xVD"/>
+                    <constraint firstItem="foU-Eg-jDI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="J0u-Aa-XqU"/>
+                    <constraint firstItem="ndD-Bq-FNm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="54" id="JjY-TV-3rk"/>
                     <constraint firstItem="ARx-pE-xe9" firstAttribute="leading" secondItem="KTT-kR-MO3" secondAttribute="trailing" constant="16" id="Llk-2L-ODL"/>
+                    <constraint firstAttribute="trailing" secondItem="ndD-Bq-FNm" secondAttribute="trailing" id="Nuj-ZV-e0p"/>
+                    <constraint firstAttribute="bottom" secondItem="ndD-Bq-FNm" secondAttribute="bottom" id="Z9y-eX-WuT"/>
                     <constraint firstItem="ARx-pE-xe9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="j40-Sh-n1P"/>
+                    <constraint firstItem="KTT-kR-MO3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="lxw-iD-bt5"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="doneButton" destination="KTT-kR-MO3" id="PBg-XT-bGk"/>
                 <outlet property="infoButton" destination="foU-Eg-jDI" id="OxN-gN-vnp"/>
                 <outlet property="noteTextView" destination="2CN-YU-fmk" id="uWp-wL-kTc"/>
                 <outlet property="titleTextView" destination="6s4-pM-rVY" id="KpE-aO-dbt"/>
@@ -81,6 +95,9 @@
     <resources>
         <image name="ic_info" width="22" height="22"/>
         <image name="ic_tick" width="22" height="22"/>
+        <namedColor name="Neutral3">
+            <color red="0.61176470588235299" green="0.61960784313725492" blue="0.72549019607843135" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
