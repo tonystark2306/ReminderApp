@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,22 +21,42 @@
                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bII-H9-S8j">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <textInputTraits key="textInputTraits"/>
+                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                     </textField>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sWc-3Y-V3s">
+                        <rect key="frame" x="16" y="43.666666666666664" width="304" height="0.3333333333333357"/>
+                        <color key="backgroundColor" name="Neutral3"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.5" id="OVW-ln-9uZ"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="bII-H9-S8j" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Bs3-D6-USD"/>
                     <constraint firstAttribute="trailing" secondItem="bII-H9-S8j" secondAttribute="trailing" id="POy-Iq-rwI"/>
+                    <constraint firstItem="sWc-3Y-V3s" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="X0O-44-9q3"/>
                     <constraint firstAttribute="bottom" secondItem="bII-H9-S8j" secondAttribute="bottom" id="XE7-4u-2Iw"/>
+                    <constraint firstAttribute="bottom" secondItem="sWc-3Y-V3s" secondAttribute="bottom" id="hjv-R8-9wz"/>
                     <constraint firstItem="bII-H9-S8j" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="ink-63-Ywb"/>
+                    <constraint firstAttribute="trailing" secondItem="sWc-3Y-V3s" secondAttribute="trailing" id="p4Q-UV-Fg7"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" name="ColorF2F2F6"/>
             <connections>
                 <outlet property="containerView" destination="H2p-sc-9uM" id="dOa-dY-0mQ"/>
+                <outlet property="separatorLine" destination="sWc-3Y-V3s" id="T1b-8p-Dbq"/>
                 <outlet property="textField" destination="bII-H9-S8j" id="BT9-pS-6T3"/>
             </connections>
             <point key="canvasLocation" x="-73" y="-11"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <namedColor name="ColorF2F2F6">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Neutral3">
+            <color red="0.61176470588235299" green="0.61960784313725492" blue="0.72549019607843135" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
