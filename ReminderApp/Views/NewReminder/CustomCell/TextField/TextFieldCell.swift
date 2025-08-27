@@ -21,7 +21,7 @@ class TextFieldCell: UITableViewCell, UITextFieldDelegate {
         containerView.backgroundColor = .clear
         textField.borderStyle = .none
         textField.backgroundColor = .neutral5
-        textField.clearButtonMode = .whileEditing
+        //textField.clearButtonMode = .whileEditing
         let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 16, height: 0))
         textField.leftView = paddingView
         textField.leftViewMode = .always
