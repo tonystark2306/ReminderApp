@@ -35,7 +35,8 @@ class ReminderCell: UITableViewCell, UITextViewDelegate {
         }
         titleTextView.font = .systemFont(ofSize: 17)
         noteTextView.font = .systemFont(ofSize: 15)
-        noteTextView.textColor = .neutral3
+        titleTextView.textColor = .neutral1
+        noteTextView.textColor = .neutral2
         infoButton.addTarget(self, action: #selector(tapInfo), for: .touchUpInside)
         doneButton.addTarget(self, action: #selector(tapDone), for: .touchUpInside) 
     }

@@ -227,7 +227,7 @@ extension ReminderVC: UITableViewDataSource, UITableViewDelegate {
         let label = UILabel()
         label.text = section == 0 ? "Today" : "Upcoming"
         label.font = .systemFont(ofSize: 22, weight: .bold)
-        label.textColor = .label
+        label.textColor = .neutral1
         let container = UIView()
         label.translatesAutoresizingMaskIntoConstraints = false
         container.addSubview(label)
@@ -266,7 +266,7 @@ extension ReminderVC: UITableViewDataSource, UITableViewDelegate {
         weak var weakCell = cell
         cell.onTapInfo = { [weak self] in
             guard let self = self,
-                  let ip = tableView.indexPath(for: weakCell!) else { return }
+                let ip = tableView.indexPath(for: weakCell!) else { return }
             self.presentNewReminder(for: self.item(at: ip))
         }
 
@@ -284,9 +284,7 @@ extension ReminderVC: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
 
-    func tableView(_ tableView: UITableView,
-                   trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath)
-    -> UISwipeActionsConfiguration? {
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let delete = UIContextualAction(style: .destructive, title: "Delete") { [weak self] _,_,done in
             guard let self = self else { return }
             let obj = self.item(at: indexPath)
@@ -297,6 +295,7 @@ extension ReminderVC: UITableViewDataSource, UITableViewDelegate {
             self.applyEmptyStateVisible()
             done(true)
         }
+        delete.backgroundColor = .primary
         return UISwipeActionsConfiguration(actions: [delete])
     }
 }

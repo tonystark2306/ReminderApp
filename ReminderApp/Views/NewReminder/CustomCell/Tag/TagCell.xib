@@ -25,8 +25,8 @@
                             <constraint firstAttribute="width" constant="32" id="6qp-Ak-BQB"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tag" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UmX-03-dL7">
-                        <rect key="frame" x="56" y="18" width="30" height="20"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Tag" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UmX-03-dL7">
+                        <rect key="frame" x="56" y="18" width="164" height="20"/>
                         <constraints>
                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="0fJ-Te-1a9"/>
                             <constraint firstAttribute="height" constant="20" id="ZGA-Tu-3Ck"/>
@@ -59,6 +59,7 @@
                     <constraint firstItem="cJE-pe-8bR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="hkD-af-6Kk"/>
                     <constraint firstItem="zLa-Jy-oJr" firstAttribute="leading" secondItem="Kag-R7-B6C" secondAttribute="trailing" constant="5" id="puX-0H-NbN"/>
                     <constraint firstAttribute="trailing" secondItem="zLa-Jy-oJr" secondAttribute="trailing" constant="12" id="umI-rg-Xy1"/>
+                    <constraint firstItem="Kag-R7-B6C" firstAttribute="leading" secondItem="UmX-03-dL7" secondAttribute="trailing" constant="24" id="zbS-4a-ohQ"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

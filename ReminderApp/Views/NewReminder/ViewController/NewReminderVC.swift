@@ -38,8 +38,22 @@ class NewReminderVC: UIViewController {
 
     private func setupNavBar() {
         title = "New Reminder"
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelTapped))
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneTapped))
+
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelTapped))
+        cancelButton.tintColor = UIColor(.accent)
+
+        let doneButton = UIBarButtonItem(title: "Done",
+                                         style: .done,
+                                         target: self,
+                                         action: #selector(doneTapped))
+        doneButton.tintColor = UIColor(.accent)
+        
+        navigationItem.leftBarButtonItem = cancelButton
+        navigationItem.rightBarButtonItem = doneButton
+        
+        navigationController?.navigationBar.titleTextAttributes = [
+            .foregroundColor: UIColor(.neutral1) as Any
+        ]
     }
 
     @objc private func cancelTapped() { dismiss(animated: true) }
@@ -96,7 +110,7 @@ extension NewReminderVC: UITableViewDataSource, UITableViewDelegate {
             if indexPath.row == 0 {
                 cell.configure(placeholder: "Title", text: reminder.title, returnKey: .next)
                 cell.textField.font = .systemFont(ofSize: 17, weight: .regular)
-                cell.textField.textColor = .neutral3
+                cell.textField.textColor = .neutral1
                 cell.onTextChanged = { [weak self] t in
                     guard let self = self else { return }
                     try? self.realm.write { self.reminder.title = t; self.reminder.updatedAt = Date() }
@@ -105,7 +119,7 @@ extension NewReminderVC: UITableViewDataSource, UITableViewDelegate {
             } else {
                 cell.configure(placeholder: "Description", text: reminder.note, returnKey: .done)
                 cell.textField.font = .systemFont(ofSize: 17, weight: .regular)
-                cell.textField.textColor = .neutral3
+                cell.textField.textColor = .neutral1
                 cell.onTextChanged = { [weak self] t in
                     guard let self = self else { return }
                     try? self.realm.write { self.reminder.note = t; self.reminder.updatedAt = Date() }
@@ -162,9 +176,13 @@ extension NewReminderVC: UITableViewDataSource, UITableViewDelegate {
         }
     }
 
-    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat { 16 }
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        16
+    }
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        let v = UIView(); v.backgroundColor = .clear; return v
+        let v = UIView();
+        v.backgroundColor = .clear;
+        return v
     }
 }
